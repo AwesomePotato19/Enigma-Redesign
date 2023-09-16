@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+  --white: #fff;
+  --orange: hsl(42, 91%, 43%);
+  --grey: #999;
+  --background: rgba(0, 0, 0, 0.3);
+
+  --gtranslucent3: rgba(100, 100, 100, 0.3);
+  --primary: hsl(42, 91%, 53%);
+  --primary-light: hsl(42, 91%, 43%);
+  --dark-gray: rgba(50, 50, 50, 0.25);
+  --gray: rgba(100, 100, 100, 0.5);
+  --light-gray: rgba(250, 250, 250, 0.3);
+}
+
+body{
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/escheresque_ste.png);
+    backdrop-filter: blur(1px);
+    font-family: Consolas;
+    color: var(--white);
+}
+
+h1{
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  max-width: 1230px;
+  width: 70%;
+}
+
+#top-navbar {
+  background-color: var(--background);
+  color: #fff;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 0 10vw;
+  padding: 0;
+  background: none;
+}
+.left-side {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+  padding: 4px 10px;
+  border-radius: 0;
+  transition: background .2s, border-radius 1s;
+}
+.logo img{
+  height: 100%;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 0;
+  transition: background .2s, border-radius 1s;
+}
+.left-side a:hover{
+  background-color: rgba(150,150,150,0.2);
+  border-radius: 10px;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  width: 60px;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search-form input[type="text"] {
+  position: relative;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  font-size: 1.25em;
+  border: 4px solid var(--primary);
+  color: var(--primary);
+}
+.search-form input:focus{
+  outline: none;
+}
+.search-form button {
+  font-size: 1.25em;
+  position: absolute;
+  padding: 4px 6px;
+  right: 4px;
+  border: none;
+  background-color: var(--gray);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s;
+}
+.search-form button:hover {
+  background-color: var(--light-gray);
+}
+
+#navbar{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    margin: 0;
+
+    transition: all 500ms linear;
+}
+#navbar a{
+    color: #f2f2f2;
+    text-align: center;
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    height: auto;
+    transition: ease-in-out 300ms;
+}
+/* Navbar links */
+#navbar a.active h1{
+    background-image: linear-gradient(orange, yellow);
+    background-size: 100%;
+}
+#navbar a h1{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        hsl(42, 91%, 43%),
+        hsl(193, 67%, 34%) 50%);
+    background-size: 1480px 230px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    z-index: 3;
+}
+#navbar a:hover{
+    background-color: var(--gray);
+    border-radius: 50px;
+}
+#navbar a:not(.active):hover h1{
+    animation: animate_text 1s linear infinite;
+}
+
+
+
+#back-button{
+    position: fixed;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em 2em;
+}
+#back-button svg{
+    width: 40px;
+    fill: rgba(255, 255, 255);
+    float: left;
+    transition: all 200ms ease-in-out;
+    padding: 10px;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 50%;
+}
+#back-button:hover svg{
+    fill: hsl(0, 0%, 60%);
+    background-color: hsla(0, 0%, 0%, 0.75);
+}
+
+
+#text{
+    padding: 50px;
+    margin: 5vh auto;
+    background-color: var(--background);
+}
+#text h1{
+    color: var(--orange);
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 1.5rem;
+}
+#text img{
+    width: 100%;
+    height: auto;
+}
+#text .quote{
+    color: var(--grey);
+    font-style: italic;
+    font-size: 1.25em;
+}
+#text p{
+    margin: 1.5em auto;
+    font-size: 1.1em;
+}
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  color: #ccc;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+@keyframes animate_text {
+    to{
+        background-position: -900px ;
+    }
+}
